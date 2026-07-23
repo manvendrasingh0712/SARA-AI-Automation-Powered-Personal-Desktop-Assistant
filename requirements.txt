@@ -1,0 +1,68 @@
+# ==========================================
+# SARA AI - requirements.txt
+# ==========================================
+# Every pinned version below was verified against the real PyPI index
+# before being committed here.
+#
+# CHANGE LOG (this pass):
+# - kokoro-onnx: 0.1.2 -> 0.5.0
+#     0.1.2 predates the v1.0 model format (voices-v1.0.bin is a binary/npz
+#     file; 0.1.2 only understands the old JSON voices format and crashes
+#     with UnicodeDecodeError trying to json.load() it).
+# - numpy: 1.26.4 -> 2.1.0
+#     kokoro-onnx==0.5.0 requires numpy>=2.0.2, conflicting with the old pin.
+# - onnxruntime-gpu: 1.17.1 -> 1.20.1
+#     1.17.1 is compiled against numpy 1.x and CUDA 11.8 only -> it would
+#     both fail at runtime under numpy 2 AND fail to load CUDA on your
+#     installed CUDA 12.9 toolkit. 1.20.1 supports numpy 2.x and CUDA 12.x.
+# - ollama: 0.2.1 -> 0.6.2
+#     0.2.1 pins httpx<0.28.0, which conflicts with ddgs==9.14.4's
+#     requirement of httpx>=0.28.1. 0.6.2 accepts httpx<0.29,>=0.27, so both
+#     packages can now agree on a shared httpx version.
+# - google-genai: 0.4.0 -> 1.23.0
+#     0.4.0 is a very old pre-GA release also pinned to an old httpx range,
+#     which would reintroduce the same httpx conflict as ollama did. 1.23.0
+#     uses the same genai.Client(api_key=...) pattern your code already
+#     calls (sara/tools/vision.py, sara/core/llm/clients.py), so no code
+#     changes should be needed. Do a quick smoke-test of the Gemini calls
+#     after upgrading, since some response-object field names changed
+#     between 0.x and 1.x.
+
+# Audio / TTS / STT
+PyAudio==0.2.14
+sounddevice==0.4.6
+webrtcvad==2.0.10
+aec-audio-processing==1.0.1
+kokoro-onnx==0.5.0
+faster-whisper==1.0.3
+openwakeword==0.6.0
+
+# LLM / AI Models
+ollama==0.6.2
+google-genai==1.23.0
+
+# Web tools
+requests==2.32.3
+beautifulsoup4==4.12.3
+duckduckgo_search==5.3.1  # Legacy-fallback, used only if the ddgs import below fails
+ddgs==9.14.4
+
+# System tools
+psutil==5.9.8
+pycaw==20230407
+comtypes==1.4.1
+keyboard==0.13.5
+screen_brightness_control==0.23.0
+
+# GUI
+pywebview==5.0.5
+pygame==2.5.2
+
+# Utilities
+dateparser==1.2.0
+pyperclip==1.8.2
+mss==9.0.1
+Pillow==10.0.0
+python-dotenv==1.0.1
+numpy==2.1.0
+onnxruntime-gpu==1.20.1

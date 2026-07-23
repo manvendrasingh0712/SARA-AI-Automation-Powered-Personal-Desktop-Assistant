@@ -1,0 +1,17 @@
+# =============================================================================
+# Sara AI — build-only dependencies
+# =============================================================================
+# These are needed ONLY to package Sara AI into a standalone .exe with
+# PyInstaller — not to run it from source. Runtime dependencies live in
+# requirements.txt and must be installed separately (this file assumes
+# they already are):
+#
+#   pip install -r requirements.txt
+#   pip install -r requirements-build.txt
+#   pyinstaller sara_ai.spec
+#
+# See BUILD.md for the full packaging guide.
+# =============================================================================
+
+pyinstaller==6.10.0
+pywin32==306

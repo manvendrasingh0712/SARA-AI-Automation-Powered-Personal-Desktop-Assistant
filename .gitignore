@@ -1,0 +1,36 @@
+# Virtual Environment
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Database
+*.db
+*.db-shm
+*.db-wal
+
+# AI Models
+models/
+*.onnx
+*.gguf
+*.bin
+*.pt
+*.pth
+
+# Build
+build/
+dist/
+*.spec
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
