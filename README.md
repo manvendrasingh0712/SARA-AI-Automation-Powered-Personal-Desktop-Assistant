@@ -400,9 +400,6 @@ This produces a one-folder Windows build at `dist/SaraAI/SaraAI.exe`. The Kokoro
 ### Voice Assistant
 ![]( ./assets/screenshots/reminders.png)
 
-### Voice Assistant
-![Voice Assistant](./assets/screenshots/voice.png)
-
 ## 💬 Usage Examples
 
 Once running, activate Sara by saying her wake word (default: **"Sara"** or **"Sarah"**) and speak naturally, or type a command in the Chat page.
