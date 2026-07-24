@@ -380,19 +380,28 @@ This produces a one-folder Windows build at `dist/SaraAI/SaraAI.exe`. The Kokoro
 
 ## 🖼️ Screenshots
 
-<!-- Insert Home Screen -->
+### Home
+![Home Screen](./assets/screenshots/home.png)
+### Voice Assistant
+![](./assets/screenshots/reminders.png)
 
-<!-- Insert Voice Assistant -->
+### Chat
+![Chat](./assets/screenshots/chat.png)
 
-<!-- Insert Chat -->
+### Memory
+![Memory](./assets/screenshots/memory.png)
 
-<!-- Insert Memory Page -->
+### Automation / System
+![Automation](./assets/screenshots/automation.png)
 
-<!-- Insert Automation / System Page -->
+### Settings
+![Settings](./assets/screenshots/settings.png)
 
-<!-- Insert Settings -->
+### Voice Assistant
+![]( ./assets/screenshots/reminders.png)
 
----
+### Voice Assistant
+![Voice Assistant](./assets/screenshots/voice.png)
 
 ## 💬 Usage Examples
 
@@ -636,6 +645,6 @@ Built on top of these open-source projects and services:
 
 <div align="center">
 
-**Built by [Manav](mailto:manvendrasinghchauhan0712@gmail.com)**
+**Built by [Manvendra singh](mailto:manvendrasinghchauhan0712@gmail.com)**
 
 </div>
