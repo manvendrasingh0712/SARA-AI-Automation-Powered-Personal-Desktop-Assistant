@@ -230,6 +230,22 @@ SARA-AI-Automation-Powered-Personal-Desktop-Assistant/
 ├── BUILD.md                      # Windows .exe packaging guide (PyInstaller)
 ├── CONTRIBUTING.md               # Contribution guidelines
 ├── LICENSE                       # MIT
+|
+|
+|
+├── assets/
+│   ├── screenshots/             
+│   │   ├── home.png        
+│   │   ├── ai brain.png
+│   │   ├── apps & tools.png
+│   │   ├── automation.png
+│   │   ├── chat.png
+│   │   ├── memory.png
+│   │   ├── notes.png
+│   │   ├── settings.png
+│   │   ├── system conrole
+│   │   ├── voice commands.png
+│   │   └── web search.png     
 │
 ├── sara/
 │   ├── orchestrator/             # The always-on conversation loop, split by concern
